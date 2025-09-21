@@ -4,13 +4,13 @@
 
 I have recently completed a Diploma in Cyber Security & Certificate IV in Cyber Security at TAFE NSW. I am interested in Blue Team and have created this portfolio to demonstrate my skills and abilities in this area.
 
-| Skill                                         | Associated Project         |
+| Project Skill                                 | Project Name               |
 |-----------------------------------------------|----------------------------|
 | Incidient Response both Blue & Red Team       | TAFE Assignment            |
 
 # Network Analysis & Monitoring
 <div>
-<img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Wireshark-blue" />
 <img src="https://img.shields.io/badge/Packet_Tracer-purple" />
 <img src="https://img.shields.io/badge/Security_Onion-grey" />
 <img src="https://img.shields.io/badge/TCPdump-orange" />
@@ -19,15 +19,15 @@ I have recently completed a Diploma in Cyber Security & Certificate IV in Cyber 
 # Threat Intelligence & Frameworks
 <div>
 <img src="https://img.shields.io/badge/MITRE_ATT%26CK-blue" />
-<img src="https://img.shields.io/badge/OWASP_Top_Ten-black />
-<img src="https://img.shields.io/badge/Cyber_Kill_Chain-grey />
+<img src="https://img.shields.io/badge/OWASP_Top_Ten-black" />
+<img src="https://img.shields.io/badge/Cyber_Kill_Chain-grey" />
+</div>
+
+# Security Information and Event Management
+<div>
+<img src="https://img.shields.io/badge/Elasticsearch-pink" />
+<img src="https://img.shields.io/badge/Splunk-red" />  
+<img src="https://img.shields.io/badge/Microsoft_Sentinel-blue" />
 </div>
 
 
-| Cyber Security Task                           | Tools                      |
-|-----------------------------------------------|----------------------------|
-| Network Analysis & Monitoring                 | <img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" />            |
-| Threat Intelligence & Frameworks              | TAFE Assignment            |
-| Vulnerability Managment & Scanning            | TAFE Assignment            |
-| Security Information and Event Management     | TAFE Assignment            |
-| Endpoint Security & Log Analysis              | TAFE Assignment            |
