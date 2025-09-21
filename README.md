@@ -1,3 +1,3 @@
 # IM9ERIUS.github.io
 
-<a href="/content.html">Content</a>
+<a href="/content.md">Content</a>
