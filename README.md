@@ -13,7 +13,7 @@ I have recently completed a Diploma in Cyber Security & Certificate IV in Cyber 
 
 | Cyber Security Task                           | Tools                      |
 |-----------------------------------------------|----------------------------|
-| Network Analysis & Monitoring                 | TAFE Assignment            |
+| Network Analysis & Monitoring                 | <img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" />            |
 | Threat Intelligence & Frameworks              | TAFE Assignment            |
 | Vulnerability Managment & Scanning            | TAFE Assignment            |
 | Security Information and Event Management     | TAFE Assignment            |
