@@ -8,7 +8,20 @@ I have recently completed a Diploma in Cyber Security & Certificate IV in Cyber 
 |-----------------------------------------------|----------------------------|
 | Incidient Response both Blue & Red Team       | TAFE Assignment            |
 
+# Network Analysis & Monitoring
+<div>
+<img src="https://img.shields.io/badge/-Wireshark-1679A7?&style=for-the-badge&logo=Wireshark&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Packet_Tracer-purple" />
+<img src="https://img.shields.io/badge/Security_Onion-grey" />
+<img src="https://img.shields.io/badge/TCPdump-orange" />
+</div>
 
+# Threat Intelligence & Frameworks
+<div>
+<img src="https://img.shields.io/badge/MITRE_ATT%26CK-blue" />
+<img src="https://img.shields.io/badge/OWASP_Top_Ten-black />
+<img src="https://img.shields.io/badge/Cyber_Kill_Chain-grey />
+</div>
 
 
 | Cyber Security Task                           | Tools                      |
