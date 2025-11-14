@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://im9erius.github.io/al-folio/sitemap.xml
+Sitemap: https://im9erius.github.io//sitemap.xml
