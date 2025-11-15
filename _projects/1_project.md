@@ -2,7 +2,7 @@
 layout: page
 title: HTB Sherlock Packet Puzzle
 description: Blue Team CTF
-img: assets/img/packet.puzzle.11.JPG
+img: assets/img/packet_puzzle.11.JPG
 importance: 1
 category: CTF
 related_publications: true
