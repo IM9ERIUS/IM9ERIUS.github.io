@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Waste no more time arguing what a good man should be. Be one. **Marcus Aurelius**
+subtitle: Waste no more time arguing what a good man should be. Be one. Marcus Aurelius
 
 profile:
   align: right
