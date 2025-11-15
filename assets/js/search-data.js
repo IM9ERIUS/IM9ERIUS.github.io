@@ -412,10 +412,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
+            },},{id: "news-a-long-announcement-with-details",
           title: 'A long announcement with details',
           description: "",
           section: "News",handler: () => {
@@ -423,9 +420,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "news-creation-of-the-im9erius-github-page-amp-amp-first-ctf-walkthrough",
+          title: 'Creation of the IM9ERIUS Github Page &amp;amp;amp; First CTF Walkthrough!',
+          description: "",
+          section: "News",},{id: "projects-htb-sherlock-packet-puzzle",
+          title: 'HTB Sherlock Packet Puzzle',
+          description: "Blue Team CTF",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-project-2",
