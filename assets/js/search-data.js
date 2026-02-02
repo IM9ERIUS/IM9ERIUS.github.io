@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-a-post-with-plotly-js",
+        },{id: "post-return-to-study-and-goals-for-2026",
+        
+          title: "Return to Study and Goals for 2026",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
         
@@ -48,6 +59,9 @@ ninja.data = [{
               window.location.href = "/books/the_godfather/";
             },},{id: "news-creation-of-the-im9erius-github-page-amp-amp-first-ctf-walkthrough",
           title: 'Creation of the IM9ERIUS Github Page &amp;amp;amp; First CTF Walkthrough!',
+          description: "",
+          section: "News",},{id: "news-return-to-study-and-completion-of-projects",
+          title: 'Return to study and completion of projects!',
           description: "",
           section: "News",},{id: "projects-htb-sherlock-packet-puzzle",
           title: 'HTB Sherlock Packet Puzzle',
