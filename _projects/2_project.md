@@ -1,81 +1,97 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Honey Pot Installation (Cowrie)
+description: Blue Team Project
+img: /assets/img/honeypot_21.JPG
 importance: 2
-category: work
+category: Personal Projects
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+**Introduction**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Hello Everyone,
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+I am excited to announce the first half of my project involving the installation / preparation for a Honey pot. A honey pot is a decoy computer system that is designed to look like a real sever / computer, However they are designed as a trap to be used by Blue Team Specialists in identifying attack patterns, techniques as well as particular motivations for an attack. This walkthrough will go through the installation and preparation of the Honey pot Cowrie. Cowrie is a SSH / Telnet honey pot which can be used to capture shell interactions performed by an attacker. This walkthrough will go through the Git Cloning of Cowrie, preparation of the honey pot virtual machine as well as checking connectivity with the attacker (For this I will be using Kali Linux, Ubuntu and Oracle Box)
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+![Screensot1](/assets/img/honeypot_1.JPG)
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The first step will be downloading the Ubuntu ISO file to install / create the virtual machine we will be using for the honey pot.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+![Screensot1](/assets/img/honeypot_2.JPG)
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+This has now been downloaded and I will configure the Virtual Machine to use the ISO file for Ubuntu. The screenshot below shows that it is now running and operational. 
 
-{% raw %}
+![Screensot1](/assets/img/honeypot_3.JPG)
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+After an unexpected crash, I have determined that it may be best to allocate more memory for the virtual machine to allow for a smoother installation of Ubuntu. 
+
+![Screensot1](/assets/img/honeypot_4.JPG)
+
+The installation of Ubuntu has been successful and I can now start the installation process of Cowrie. Cowrie utilises Python and requires several dependencies in order for it to function appropriately. I first had to install Git in order for the Git Clone command to work. 
+
+![Screensot1](/assets/img/honeypot_5.JPG)
+
+After the installation of Git I am now able to run the Git Clone command allowing me to download Cowrie and all the necessary files required. 
+
+![Screensot1](/assets/img/honeypot_6.PNG)
+
+The first requirement is to ensure that Ubuntu is using Python 3.10+, without this version Cowrie may not work correctly and may cause issues down the road. The second requirement is downloading python-virtualenv, I am unfamiliar with this python feature and have discovered that it is used to create isolated folders containing their own Python executables & libraries. 
+
+![Screensot1](/assets/img/honeypot_7.JPG)
+
+I have confirmed that Ubuntu is running the latest version of Python ensuring that Cowrie will work as intended. 
+
+![Screensot1](/assets/img/honeypot_8.JPG)
+
+After attempting to install python-virtualenv it was not successful, meaning I have to first install pip before I can download it. 
+
+![Screensot1](/assets/img/honeypot_9.JPG)
+
+After attempting to install python virtual-env I have come across the following error advising me to use pipx.
+
+![Screensot1](/assets/img/honeypot_10.JPG)
+
+After using pipx the installation of python-virtualenv worked as required. 
+
+![Screensot1](/assets/img/honeypot_11.JPG)
+
+![Screensot1](/assets/img/honeypot_12.JPG)
+
+It has now been installed! based on the Cowrie installation guide it advises to run Cowrie as an account without root privileges. 
+
+![Screensot1](/assets/img/honeypot_20.JPG)
+
+The new account has been created and I have followed the necessary steps to install necessary packages for Cowrie. 
+
+![Screensot1](/assets/img/honeypot_13.JPG)
+
+
+I now run the command required to start the cowrie environment and for cowrie to launch. 
+
+
+![Screensot1](/assets/img/honeypot_14.JPG)
+
+Part of the absolute joy (And Nightmare, perspectives) is troubleshooting. I had my second VM ready and noticed that I did not have an IP address for both the attacker VM and the Ubunutu VM. After troubleshooting with the Network settings in Virtual Box I had discovered that the DHCP (Dynamic Host Control Protocol) setting had been disabled meaning my VM's were not getting ip addresses automatically. This has now been resolved and can confirm connection from both machines.
+
+
+
+![Screensot1](/assets/img/honeypot_15.JPG)
+![Screensot1](/assets/img/honeypot_16.JPG)
+![Screensot1](/assets/img/honeypot_17.JPG)
+
+
+I now run an NMAP scan on my attackers machine and discover that port 2222 is open (Automatic port used by Cowrie) meaning that it is ready to be exploited and our honey pot is ready to log its attacks. 
+
+![Screensot1](/assets/img/honeypot_18.JPG)
+
+![Screensot1](/assets/img/honeypot_19.JPG)
+
+This concludes the walkthrough of the installation of Cowrie and preparation of my virtual machines. I enjoy these exercises as it allows me to prepare for blue team operations and I do get a thrill when I am able to identify and fix a problem. Join me for my next walkthrough where I will attack Cowrie and use Cowrie to record all my actions in real time.
+
+See you soon,
+
+**IM9ERIUS**
+
 ```
 
-{% endraw %}
