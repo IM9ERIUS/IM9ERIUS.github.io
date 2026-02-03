@@ -52,22 +52,7 @@ ninja.data = [{
           section: "News",},{id: "news-return-to-study-and-completion-of-projects",
           title: 'Return to study and completion of projects!',
           description: "",
-          section: "News",},{id: "projects-htb-sherlock-packet-puzzle",
-          title: 'HTB Sherlock Packet Puzzle',
-          description: "Blue Team CTF",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-honey-pot-installation-cowrie",
-          title: 'Honey Pot Installation (Cowrie)',
-          description: "Blue Team Project",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-honey-pot-demonstration-cowrie",
-          title: 'Honey Pot Demonstration (Cowrie)',
-          description: "Walkthrough of Cowrie useage",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
+          section: "News",},{id: "projects-project-4",
           title: 'project 4',
           description: "another without an image",
           section: "Projects",handler: () => {
@@ -97,6 +82,21 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-honey-pot-installation-cowrie",
+          title: 'Honey Pot Installation (Cowrie)',
+          description: "Blue Team Project",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Cowrie_Install/";
+            },},{id: "projects-honey-pot-demonstration-cowrie",
+          title: 'Honey Pot Demonstration (Cowrie)',
+          description: "Walkthrough of Cowrie useage",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Cowrie_Walkthrough/";
+            },},{id: "projects-htb-sherlock-packet-puzzle",
+          title: 'HTB Sherlock Packet Puzzle',
+          description: "Blue Team CTF",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/Packet_Puzzle/";
             },},{
         id: 'social-email',
         title: 'email',
