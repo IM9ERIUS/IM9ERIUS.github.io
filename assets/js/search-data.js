@@ -52,12 +52,7 @@ ninja.data = [{
           section: "News",},{id: "news-return-to-study-and-completion-of-projects",
           title: 'Return to study and completion of projects!',
           description: "",
-          section: "News",},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
+          section: "News",},{id: "projects-project-5",
           title: 'project 5',
           description: "a project with a background image",
           section: "Projects",handler: () => {
@@ -82,6 +77,11 @@ ninja.data = [{
           description: "Walkthrough of the creation of my SIEM homelab",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-comptia-security-reflection",
+          title: 'CompTIA Security+ Reflection',
+          description: "Personal thoughts on the certificate",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/COMP_TIA/";
             },},{id: "projects-honey-pot-installation-cowrie",
           title: 'Honey Pot Installation (Cowrie)',
           description: "Blue Team Project",
