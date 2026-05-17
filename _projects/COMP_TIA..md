@@ -2,7 +2,7 @@
 layout: page
 title: CompTIA Security+ Reflection
 description: Personal thoughts on the certificate
-img: /assets/img/comptia_2
+img: /assets/img/comptia_2.jpg
 importance: 5
 category: Personal Projects
 ---
@@ -17,7 +17,7 @@ CompTIA Security + is an entry level cyber security certification, it is marked 
 
 The resources that helped me the most was Professor Messer's videos on YouTube going through SY0-701 course material, practice notes as well as practice exams. As I am not from the IT industry originally these resources helped me get my head in the game for the exam and allowed me to remember the content for the exam. I can not recommend Professor Messer enough as the explanations he provided for complex topics made the content so much easier to understand. For anyone thinking of taking the exam I would strongly encourage using his resources and videos. 
 
-![Screensot1](/assets/img/comptia_1)
+![Screensot1](/assets/img/comptia_1.JPG)
 
 The Performance Based Questions (PBQ's) were definitely a challenge during the exam, These PBQ's focused on threat analysis, password management as well as the configuration of a Site-to-Site VPN. If I could do everything again I would have brushed up on these skills before completing the exam. 
 
@@ -25,7 +25,7 @@ My recommendation for this exam would be to take the time to actually understand
 
 This took me three weeks of hard studying, revision and practice and I am proud of the achievement and result I received. I encourage everyone to take the leap of faith, trust in yourself and go get this certificate! I thought about this for months before getting the courage to buy the exam voucher (with an extra chance in-case I failed). I hope this will display to potential employers my commitment to Cyber Security as it has improved my confidence in continuing to learn more. 
 
-![Screensot1](/assets/img/comptia_3)
+![Screensot1](/assets/img/comptia_3.png)
 
 Regards
 IM9ERIUS
