@@ -2,7 +2,7 @@
 layout: page
 title: Active Directory SOC Home Lab
 description: Walkthrough of the creation of Active Directory Server & SIEM
-img: assets/img/ad_1.png
+img: /assets/img/ad_1.png
 importance: 6
 category: Personal Projects
 ---
