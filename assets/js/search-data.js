@@ -67,11 +67,6 @@ ninja.data = [{
           description: "with background image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
             },},{id: "projects-wazuh-home-lab-installation",
           title: 'Wazuh Home Lab Installation',
           description: "Walkthrough of the creation of my SIEM homelab",
@@ -97,6 +92,11 @@ ninja.data = [{
           description: "Blue Team CTF",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Packet_Puzzle/";
+            },},{id: "projects-active-directory-soc-home-lab",
+          title: 'Active Directory SOC Home Lab',
+          description: "Walkthrough of the creation of Active Directory Server &amp; SIEM",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ad_homelab/";
             },},{
         id: 'social-email',
         title: 'email',
